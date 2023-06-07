@@ -1,3 +1,4 @@
+cd "${KOKORO_ARTIFACTS_DIR}/github/empty-vm-metrics/custom-metrics"
 date +%s
 date
 start_time=$(date +%s)
