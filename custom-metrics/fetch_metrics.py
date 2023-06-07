@@ -6,8 +6,8 @@ def sample_list_time_series(start_time_sec, end_time_sec, period) -> None:
     client = monitoring_v3.MetricServiceClient()
 
 
-    #metric_type = "custom.googleapis.com/opencensus/test_star_count/star_count"
-    metric_type = "custom.googleapis.com/gcsfuse/gcs/read_bytes_count"
+    metric_type = "custom.googleapis.com/opencensus/test_star_count/star_count"
+    #metric_type = "custom.googleapis.com/gcsfuse/gcs/read_bytes_count"
 
     metric_filter = ('metric.type = "{metric_type}"').format(metric_type=metric_type)
 
