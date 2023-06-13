@@ -1,5 +1,4 @@
 cd "${KOKORO_ARTIFACTS_DIR}/github/empty-vm-metrics/custom-metrics"
-sleep 20000
 pip install --require-hashes -r requirements.txt --user
 date +%s
 date
