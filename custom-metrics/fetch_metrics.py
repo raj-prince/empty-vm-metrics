@@ -47,8 +47,15 @@ def sample_list_time_series(start_time_sec, end_time_sec, period) -> None:
     # Make the request
     page_result = client.list_time_series(request=request)
 
+    if len(page_result) == 0:
+        print("Empty result")
+        exit(1)
+
     # Handle the response
     for response in page_result:
+      if response.value == 0:
+        print("Empty result")
+        exit(1)
         print(response)
 
 def main() -> None:
